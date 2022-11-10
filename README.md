@@ -36,3 +36,4 @@ For questions please contact Maivory12@icloud.com
 
 
 ##Deployment
+https://maivory12.github.io/password-gen/
