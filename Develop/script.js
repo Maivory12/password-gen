@@ -12,6 +12,7 @@ var password = ``
 function writePassword() {
   var passwordLength = parseInt(prompt("choose password length between 8 and 128 characters"))
   console.log(passwordLength)
+  //
   if (!passwordLength) {
 
     alert("You must choose a number");
@@ -21,41 +22,42 @@ function writePassword() {
     alert("You must choose between 8 and 128 characters")
   }
   else {
+    //
     if (confirm(`Do you want an uppercase character?`)) {
       typeOfcharacter +=  upperCase;
     }
-
+    //
     if (confirm(`Do you want an lowercase character?`)) {
       typeOfcharacter += lowerCase;
-
     }
-
+    //
     if (confirm(`Do you want a number character?`)) {
       typeOfcharacter += number;
 
     } 
-    
+    //
     if (confirm(`Do you want a symbol?`)) {
       typeOfcharacter += symbol;
-
-    
     }
-
+    //
     if (typeOfcharacter.length >= 1){
       for (var i = 0; i <= passwordLength; i++){
 
       password += typeOfcharacter[Math.floor(Math.random() * typeOfcharacter.length)];
       }
-      console.log (password)
+    
     }
+    // 
+      else {
+      alert(`You must choose a character, number, or symbol.`);
+    
+    }
+  }
 
-    }
-  
-  
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-  }
+}
 
 
 // Add event listener to generate button
