@@ -10,12 +10,12 @@ var password = ``
 // Write password to the #password input
 
 function writePassword() {
-  var passwordLength = parseInt(prompt("choose password length between 8 and 128 characters"))
+  var passwordLength = parseInt(prompt("Enter a number between 8 and 128 characters to be the length of your password"))
   console.log(passwordLength)
   //Alerts user that a number must be entered.
   if (!passwordLength) {
 
-    alert("You must choose a number");
+    alert("You must choose a number between 8 and 128");
 
   } 
   //Alerts user to choose a password length between 8 and 128 characters.
@@ -27,23 +27,23 @@ function writePassword() {
   else {
   //Allows user to choose uppercase characters to add to password.
 
-    if (confirm(`Do you want an uppercase character?`)) {
+    if (confirm(`Do you want to have uppercase letters?`)) {
       typeOfcharacter +=  upperCase;
     }
   //Allows user to choose lowercase characters to add to password.
 
-    if (confirm(`Do you want an lowercase character?`)) {
+    if (confirm(`Do you want to have lowercase letters?`)) {
       typeOfcharacter += lowerCase;
     }
   //Allows user to choose numbers to add to password.
 
-    if (confirm(`Do you want a number character?`)) {
+    if (confirm(`Do you want to have numbers?`)) {
       typeOfcharacter += number;
 
     } 
    // Allows user to choose symbols to add to password.
 
-    if (confirm(`Do you want a symbol?`)) {
+    if (confirm(`Do you want symbols?`)) {
       typeOfcharacter += symbol;
     }
   // For loop to choose random items from list of choices if selected.
@@ -58,7 +58,7 @@ function writePassword() {
     // User is alerted if no criteria is met.
     
       else {
-      alert(`You must choose a character, number, or symbol.`);
+      alert(`You must choose to have letters, numbers, or symbols to generate a password.`);
     
     }
   }
