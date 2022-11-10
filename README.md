@@ -34,3 +34,5 @@ For questions please contact Maivory12@icloud.com
 ##Mock-Up
 ![Mock Up](./images/_C__Users_14787_gt-bootcamp_homework_password-gen_Develop_index.html.png)
 
+
+##Deployment
