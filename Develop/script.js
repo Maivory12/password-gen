@@ -1,17 +1,18 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var upperCase = (`ABCDEFGHIJKLMNOPQRSTUVWXYZ`); 
-var lowerCase = (`abcdefghijklmnopqrstuvwxyz`);
-var number = (0,1,2,3,4,5,6,7,8,9);
-var symbol = (`!@#$%^&*()-+`);
-var typeOfcharacter = ``
-var password = ``
 
 // Write password to the #password input
 
 function writePassword() {
-  var passwordLength = parseInt(prompt("Enter a number between 8 and 128 characters to be the length of your password"))
-  console.log(passwordLength)
+  var passwordText = document.querySelector("#password");
+  var upperCase = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`; 
+  var lowerCase = `abcdefghijklmnopqrstuvwxyz`;
+  var number = `0123456789`;
+  var symbol = `!@#$%^&*()-+`;
+  var typeOfcharacter = ``;
+  var password = ``;
+  var passwordLength = parseInt(prompt("Enter a number between 8 and 128 characters to be the length of your password"));
+  
   //Alerts user that a number must be entered.
   if (!passwordLength) {
 
@@ -23,8 +24,7 @@ function writePassword() {
   else if (passwordLength<8 || passwordLength>128)
   {
     alert("You must choose between 8 and 128 characters")
-  }
-  else {
+  } else {
   //Allows user to choose uppercase characters to add to password.
 
     if (confirm(`Do you want to have uppercase letters?`)) {
@@ -54,16 +54,14 @@ function writePassword() {
       password += typeOfcharacter[Math.floor(Math.random() * typeOfcharacter.length)];
       }
     
-    }
-    // User is alerted if no criteria is met.
-    
-      else {
+    } else {
+        // User is alerted if no criteria is met.
       alert(`You must choose to have letters, numbers, or symbols to generate a password.`);
     
     }
   }
 
-  var passwordText = document.querySelector("#password");
+ 
 
   passwordText.value = password;
 }
