@@ -53,8 +53,11 @@ function writePassword() {
 
       password += typeOfcharacter[Math.floor(Math.random() * typeOfcharacter.length)];
       }
-      // User is alerted if no criteria is met.
-    } else {
+    
+    }
+    // User is alerted if no criteria is met.
+    
+      else {
       alert(`You must choose to have letters, numbers, or symbols to generate a password.`);
     
     }
